@@ -36,9 +36,11 @@ if (process.env.MONGODB_URI) {
 }
 
 
-// Routes
 
-// A GET route for scraping the echojs website
+app.get('/', function(req,res){
+	res.render('index');
+});
+
 app.get("/scrape", function(req, res) {
   // First, we grab the body of the html with request
   request("http://www.fark.com/", function(error, response, html) {
