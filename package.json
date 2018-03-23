@@ -1,0 +1,33 @@
+{
+  "name": "scrape_ape",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "body-parser": "^1.18.2",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "jsonframe-cheerio": "^3.0.1",
+    "mongoose": "^4.13.12",
+    "morgan": "^1.9.0",
+    "request": "^2.85.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kalindrov/scrapeApe.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Kalindrov/scrapeApe/issues"
+  },
+  "homepage": "https://github.com/Kalindrov/scrapeApe#readme"
+}
