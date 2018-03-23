@@ -8,7 +8,7 @@ var cheerio = require("cheerio");
 
 var db = require("./models");
 
-var PORT = 3000;
+var PORT = process.env.PORT || 3000;
 
 var app = express();
 
@@ -25,8 +25,8 @@ app.use(express.static("public"));
 // Connect to the Mongo DB
 mongoose.Promise = Promise;
 
-// var databaseUrl = 'mongodb://localhost/scrapeApe';
-var databaseUrl = 'mongodb://heroku_mfjjk6qd:tgvtnim05t1mc15psb55dom13c@ds117625.mlab.com:17625/heroku_mfjjk6qd';
+var databaseUrl = 'mongodb://localhost/scrapeApe';
+// var databaseUrl = 'mongodb://heroku_mfjjk6qd:tgvtnim05t1mc15psb55dom13c@ds117625.mlab.com:17625/heroku_mfjjk6qd';
 
 if (process.env.MONGODB_URI) {
   mongoose.connect(process.env.MONGODB_URI, 
