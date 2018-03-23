@@ -25,18 +25,16 @@ app.use(express.static("public"));
 // Connect to the Mongo DB
 mongoose.Promise = Promise;
 
-var databaseUrl = 'mongodb://localhost/scrapeApe';
+var databaseUri = 'mongodb://localhost/scrapeApe';
 // var databaseUrl = 'mongodb://heroku_mfjjk6qd:tgvtnim05t1mc15psb55dom13c@ds117625.mlab.com:17625/heroku_mfjjk6qd';
 
 if (process.env.MONGODB_URI) {
   mongoose.connect(process.env.MONGODB_URI, 
     {  useMongoClient: true });
 } else {
-  mongoose.connect(databaseUrl, 
+  mongoose.connect(databaseUri, 
     {  useMongoClient: true });
 }
-
-
 
 app.get('/', function(req,res){
 	res.render('index');
